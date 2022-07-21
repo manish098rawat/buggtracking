@@ -17,7 +17,6 @@ public class UserServiceImpl implements UserService{
 	public UserEntity saveOrUpdate(UserEntity user) {
 		// TODO Auto-generated method stub
 		try{
-			user.setId(user.getId());
 			return userRepository.save(user);
 		}catch(Exception ex) {
 			throw new UserIdException("User Id : "+ user.getId() +"already exists");

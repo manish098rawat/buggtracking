@@ -17,7 +17,6 @@ public class BugServiceImpl implements BugService {
 	public Bug saveOrUpdate(Bug bug) {
 		// TODO Auto-generated method stub
 		try{
-			bug.setId(bug.getId());
 			return bugRepository.save(bug);
 		}catch(Exception ex) {
 			throw new BugIdException("Bug Id : "+ bug.getId() +"already exists");

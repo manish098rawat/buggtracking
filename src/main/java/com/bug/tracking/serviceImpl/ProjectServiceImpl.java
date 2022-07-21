@@ -17,7 +17,6 @@ public class ProjectServiceImpl implements ProjectService {
 	public Project saveOrUpdate(Project project) {
 		// TODO Auto-generated method stub
 		try{
-			project.setProjectIdentifier(project.getProjectIdentifier().toUpperCase());
 			return projectRepository.save(project);
 		}catch(Exception ex) {
 			throw new ProjectIdException("Project Id : "+project.getProjectIdentifier().toUpperCase()+"already exists");

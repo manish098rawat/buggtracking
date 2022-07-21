@@ -18,7 +18,6 @@ public class EmployeeServiceImpl implements EmployeeService{
 	public Employee saveOrUpdate(Employee employee) {
 		// TODO Auto-generated method stub
 		try{
-			employee.setId(employee.getId());
 			return employeeRepository.save(employee);
 		}catch(Exception ex) {
 			throw new EmployeeIdException("Employee Id : "+ employee.getId() +"already exists");

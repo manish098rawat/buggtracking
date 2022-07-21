@@ -17,7 +17,6 @@ public class AdminServiceImpl  implements AdminService{
 	public Admin saveOrUpdate(Admin admin) {
 		// TODO Auto-generated method stub
 		try{
-			admin.setId(admin.getId());
 			return adminRepository.save(admin);
 		}catch(Exception ex) {
 			throw new AdminIdException("Admin Id : "+ admin.getId() +"already exists");
